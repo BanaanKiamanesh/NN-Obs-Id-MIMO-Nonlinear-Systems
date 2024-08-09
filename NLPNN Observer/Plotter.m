@@ -11,9 +11,9 @@ function status = Plotter(t, y, flag)
         trueLine3D = animatedline('Color', 'k', 'LineWidth', 1.5, 'DisplayName', 'True Attractor');
         estLine3D = animatedline('Color', 'r', 'LineStyle', '--', 'LineWidth', 1, 'DisplayName', 'Estimated Attractor');
         view(-5, 0);
-        xlabel('x_1');
-        ylabel('x_2');
-        zlabel('x_3');
+        xlabel('x');
+        ylabel('y');
+        zlabel('z');
         title('Lorenz Attractor and Estimated Trajectory');
         legend('show', 'Interpreter', 'latex', 'FontSize', 12);
         legend('boxoff');
@@ -28,8 +28,8 @@ function status = Plotter(t, y, flag)
             grid on;
             StateLines(i) = animatedline('Color', 'k', 'LineStyle', '--', 'DisplayName', ['$x_', num2str(i), '$']);
             EstLines(i)   = animatedline('Color', 'r', 'LineStyle', '-.', 'DisplayName', ['$\hat{x}_', num2str(i), '$']);
-            xlabel('Time');
-            ylabel(['Error e_', num2str(i)]);
+            xlabel('Time', "FontWeight", "bold");
+            ylabel(['x_', num2str(i)], "FontWeight", "bold", "FontSize", 15);
             legend('show', 'Interpreter', 'latex', 'FontSize', 20);
         end
         sgtitle("Lorenz Attractor Neural Observer", 'FontWeight', 'bold', 'FontSize', 20);

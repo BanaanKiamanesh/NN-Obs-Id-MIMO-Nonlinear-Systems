@@ -11,9 +11,9 @@ function status = Plotter2(t, y, flag)
         trueLine3D = animatedline('Color', 'k', 'LineWidth', 1.5, 'DisplayName', 'True Attractor');
         estLine3D = animatedline('Color', 'r', 'LineStyle', '--', 'LineWidth', 1, 'DisplayName', 'Estimated Attractor');
         view(-5, 0);
-        xlabel('x_1');
-        ylabel('x_2');
-        zlabel('x_3');
+        xlabel('x');
+        ylabel('y');
+        zlabel('z');
         title('Lorenz Attractor and Estimated Trajectory');
         legend('show', 'Interpreter', 'latex', 'FontSize', 12);
         legend('boxoff');
@@ -27,7 +27,7 @@ function status = Plotter2(t, y, flag)
             grid on;
             errLines(i) = animatedline('Color', 'k', 'LineStyle', '-.', 'DisplayName', ['$e_', num2str(i), '$']);
             xlabel('Time');
-            ylabel(['Error e_', num2str(i)]);
+            ylabel(['x_', num2str(i)]);
             legend('show', 'Interpreter', 'latex', 'FontSize', 12);
             legend('boxoff');
         end

@@ -14,7 +14,7 @@ classdef Attractor
         Ac                                % (A - GC) X_err
 
         % Neural Network Properties
-        NumNeurons = 10
+        NumNeurons = 25
         SystemOrder = 3    
         
         % Size of the V and W Matrices
