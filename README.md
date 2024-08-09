@@ -4,7 +4,7 @@ Implementation of a recurrent neural network based Observer/Identifier for highl
 
 > ***Note:*** In this context, an observer uses system output as input to estimate states, whereas an identifier uses system states as input to estimate unknown dynamics.
 
-![Results](Assets/Img.jpg)
+![Results](assets/Img.jpg)
 
 ---
 
